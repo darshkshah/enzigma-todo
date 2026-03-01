@@ -44,7 +44,6 @@ __screenshots__/
 Thumbs.db
 
 # Environment files
-*.env
 .env.prod
 
 # Database
