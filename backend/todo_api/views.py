@@ -24,6 +24,7 @@ class IsOwnerOrSuperUser(BasePermission):
         return (
             obj.created_by == request.user
             or request.user.is_superuser
+            or obj.assigned_to == request.user
         )
 
 class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
