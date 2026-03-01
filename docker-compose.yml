@@ -75,4 +75,3 @@ volumes:
 networks:
   dev-todo-network:
     name: dev-todo-network
-    external: true
