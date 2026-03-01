@@ -1,17 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
-    height: 100%;
     margin: 0;
+    overflow: none;
 }
 
-body {
-    min-height: 100vh;
-}
-
-app-root {
+app-tasks-page, app-login-page, app-register-page {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    height: 100%;
+    min-height: 100vh;
+    background-color: white; 
+}
+
+app-login-page, app-register-page {
+    background-color: #f5f5f5;
+}
+
+.slds-resizable__divider:after {
+    height: 0px !important;
 }

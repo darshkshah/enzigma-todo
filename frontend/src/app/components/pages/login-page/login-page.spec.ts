@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskTable } from './task-table';
-import { TextReplacePipe } from '../../pipes/text-replace-pipe/text-replace-pipe';
+import { LoginPage } from './login-page';
 
-describe('TaskTable', () => {
-  let component: TaskTable;
-  let fixture: ComponentFixture<TaskTable>;
+describe('LoginPage', () => {
+  let component: LoginPage;
+  let fixture: ComponentFixture<LoginPage>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskTable]
+      imports: [LoginPage]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TaskTable);
+    fixture = TestBed.createComponent(LoginPage);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

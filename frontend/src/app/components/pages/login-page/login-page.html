@@ -1,0 +1,34 @@
+<div class="slds-box slds-align_absolute-center form-container">
+    <form [formGroup]="loginFormGroup">
+        <div class="slds-text-heading_large slds-align_absolute-center">Login</div>
+
+        <div class="slds-form-element slds-m-top_medium" [class]="{'slds-has-error': isUsernameMarkedError}">
+            <label class="slds-form-element__label" for="text-input-id-237">
+                <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>Input Label</label>
+            <div class="slds-form-element__control">
+                <input type="text" id="text-input-id-237" placeholder="Placeholder text…" required="" class="slds-input" formControlName="username"/>
+            </div>
+            @if (isUsernameMarkedError) {
+                <div class="slds-form-element__help" id="error-message-id-49">This field is required.</div>
+            }
+        </div>
+
+        <div class="slds-form-element slds-m-top_xx-small" [class]="{'slds-has-error': isPasswordMarkedError}">
+            <label class="slds-form-element__label" for="text-input-id-237">
+                <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>Password</label>
+            <div class="slds-form-element__control">
+                <input type="password" id="text-input-id-237" placeholder="Enter your password…" required="" class="slds-input" formControlName="password"/>
+            </div>
+            @if (isPasswordMarkedError) {
+                <div class="slds-form-element__help" id="error-message-id-49">This field is required.</div>
+            }
+        </div>
+
+        <div class="slds-text-align_center slds-m-top_medium">Dont have an account? <a routerLink="/register">Register</a></div>
+
+        <button class="slds-button slds-button_brand slds-align_absolute-center slds-m-top_medium" (click)="onLogin()">
+            Login
+        </button>
+    </form>
+</div>
+

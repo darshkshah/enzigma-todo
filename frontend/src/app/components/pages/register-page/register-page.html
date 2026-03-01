@@ -1,0 +1,63 @@
+<div class="slds-box slds-align_absolute-center form-container">
+    <form [formGroup]="registerFormGroup">
+        <div class="slds-text-heading_large slds-align_absolute-center">Register</div>
+        <div class="slds-form-element slds-m-top_medium" [class]="{'slds-has-error': isUserNameMarkedError}">
+            <label class="slds-form-element__label" for="text-input-id-237">
+                <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>Username</label>
+            <div class="slds-form-element__control">
+                <input type="text" id="text-input-id-237" placeholder="Placeholder text…" required="" class="slds-input" formControlName="username"/>
+            </div>
+            @if (isUserNameMarkedError) {
+                <div class="slds-form-element__help" id="error-message-id-49">Username field is required.</div>
+            }
+        </div>
+        <div class="slds-form-element" [class]="{'slds-has-error': isPasswordMarkedError}">
+            <label class="slds-form-element__label" for="text-input-id-237">
+                <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>Password</label>
+            <div class="slds-form-element__control">
+                <input type="password" id="text-input-id-237" placeholder="Placeholder text…" required="" class="slds-input" formControlName="password"/>
+            </div>
+            @if (isPasswordMarkedError) {
+                <div class="slds-form-element__help" id="error-message-id-49">Password field is required.</div>
+            }
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <div class="slds-form-element" [class]="{'slds-has-error': isFirstNameMarkedError}">
+                    <label class="slds-form-element__label" for="text-input-id-237">
+                        <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>First Name</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-237" placeholder="Placeholder text…" required="" class="slds-input" formControlName="first_name"/>
+                    </div>
+                    @if (isFirstNameMarkedError) {
+                        <div class="slds-form-element__help" id="error-message-id-49">First name field is required.</div>
+                    }
+                </div>
+            </div>
+            <div class="slds-col">
+                <div class="slds-form-element" [class]="{'slds-has-error': isLastNameMarkedError}">
+                    <label class="slds-form-element__label" for="text-input-id-237">
+                        <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>Last Name</label>
+                    <div class="slds-form-element__control">
+                        <input type="text" id="text-input-id-237" placeholder="Placeholder text…" required="" class="slds-input" formControlName="last_name"/>
+                    </div>
+                    @if (isLastNameMarkedError) {
+                        <div class="slds-form-element__help" id="error-message-id-49">Last name field is required.</div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="slds-form-element" [class]="{'slds-has-error': isEmailMarkedError}">
+            <label class="slds-form-element__label" for="text-input-id-237">
+                <abbr class="slds-required" title="required" aria-hidden="true">* </abbr>Email</label>
+            <div class="slds-form-element__control">
+                <input type="text" id="text-input-id-237" placeholder="Placeholder text…" required="" class="slds-input" formControlName="email"/>
+            </div>
+            @if (isEmailMarkedError) {
+                <div class="slds-form-element__help" id="error-message-id-49">Email field is required.</div>
+            }
+        </div>
+        <div class="slds-text-align_center slds-m-top_medium">Already have an account? <a routerLink="/login">Login</a></div>
+        <button class="slds-button slds-button_brand slds-align_absolute-center slds-m-top_medium" (click)="onRegister()">Register</button>
+    </form>
+</div>

@@ -1,19 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskTable } from './task-table';
-import { TextReplacePipe } from '../../pipes/text-replace-pipe/text-replace-pipe';
+import { TaskCreateForm } from './task-create-form';
 
-describe('TaskTable', () => {
-  let component: TaskTable;
-  let fixture: ComponentFixture<TaskTable>;
+describe('TaskCreateForm', () => {
+  let component: TaskCreateForm;
+  let fixture: ComponentFixture<TaskCreateForm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskTable]
+      imports: [TaskCreateForm]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TaskTable);
+    fixture = TestBed.createComponent(TaskCreateForm);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

@@ -1,0 +1,20 @@
+<div class="slds-notify slds-notify_alert" role="alert">
+    <span class="slds-assistive-text">info</span>
+    <span class="slds-icon_container slds-icon-utility-user slds-m-right_x-small"
+        title="Description of icon when needed">
+        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#user"></use>
+        </svg>
+    </span>
+    <h2>Logged in as {{authService.user()?.first_name}} {{authService.user()?.last_name}} ({{authService.user()?.email}}).
+        <a href="#" (click)="logout()">Log out</a>
+    </h2>
+    <!-- <div class="slds-notify__close">
+        <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-inverse" title="Close">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Close</span>
+        </button>
+    </div> -->
+</div>

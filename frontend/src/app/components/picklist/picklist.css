@@ -1,0 +1,11 @@
+.slds-combobox {
+    user-select: none;
+}
+
+.opacity-zero {
+    opacity: 0;
+}
+
+.error {
+    color: #ea001e;
+}

@@ -1,0 +1,26 @@
+textarea {
+    min-height: 200px;
+}
+
+.slds-col {
+    min-width: 200px;
+    flex: 1;
+}
+
+.slds-grid {
+    flex-wrap: wrap;
+}
+
+@media (min-height: 460px) {    
+    .form-content {
+        min-height: 50vh;
+    }
+}
+
+.error {
+    color: #ea001e;
+}
+
+.display-none {
+    display: none;
+}

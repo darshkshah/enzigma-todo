@@ -1,14 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TaskService } from '../../services/task-service/task-service';
+import { DatePipe, TitleCasePipe } from '@angular/common';
+import { TextReplacePipe } from '../../pipes/text-replace-pipe/text-replace-pipe';
 
 @Component({
   selector: 'app-task-table',
-  imports: [],
+  imports: [TitleCasePipe, DatePipe, TextReplacePipe],
   templateUrl: './task-table.html',
   styleUrl: './task-table.css',
 })
 export class TaskTable {
+    taskService = inject(TaskService);
+    count: number = 3
+
     ngOnInit(): void {
-        console.log("Table loaded");
-        console.log("Table loaded");
+        this.taskService.loadTasks().subscribe(reponse => {
+            if (reponse.body != null) {
+                const tasks = reponse.body
+                this.taskService.count.set(tasks.count)
+                this.taskService.setTasksLocally(tasks.results);
+            }
+        });
     }
 }

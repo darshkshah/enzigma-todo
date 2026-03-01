@@ -19,13 +19,13 @@
             </div>
         </div>
         <div class="slds-text-heading_small left-bottom text-color-importance-low">
-            4 records
+            {{ taskService.count() }} records
         </div>
     </div>
     <div class="right">
         <div class="slds-button-group" role="group">
-            <button class="slds-button slds-button_neutral slds-button_stretch">New Task</button>
-            <button class="slds-button slds-button_neutral slds-button_stretch">Refresh</button>
+            <button class="slds-button slds-button_neutral slds-button_stretch" (click)="newTaskOpen()">New Task</button>
+            <button class="slds-button slds-button_neutral slds-button_stretch" (click)="onRefresh()">Refresh</button>
         </div>
         <div class="slds-form-element">
             <!-- <label class="slds-form-element__label" for="text-input-id-47">Input Label</label> -->
